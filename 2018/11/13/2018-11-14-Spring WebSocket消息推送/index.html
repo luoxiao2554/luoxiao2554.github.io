@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>Spring WebSocket消息推送 | luoxiao</title>
+  <meta name="description" content="需求:后台编辑推送消息，前台实时接收消息下面是js实现123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869$(function() &amp;#123;	bdipOnline();&amp;#125;);var">
+<meta name="keywords" content="WebSocket">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring WebSocket消息推送">
+<meta property="og:url" content="luoxiao.cf&#x2F;2018&#x2F;11&#x2F;13&#x2F;2018-11-14-Spring%20WebSocket%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81&#x2F;index.html">
+<meta property="og:site_name" content="LUOXIAO&#39;S BLOG">
+<meta property="og:description" content="需求:后台编辑推送消息，前台实时接收消息下面是js实现123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869$(function() &amp;#123;	bdipOnline();&amp;#125;);var">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-09-09T02:11:19.000Z">
+<meta name="twitter:card" content="summary">
+  <!-- Canonical links -->
+  <link rel="canonical" href="luoxiao.cf/2018/11/13/2018-11-14-Spring%20WebSocket%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="LUOXIAO&#39;S BLOG" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  
+  
+  
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.css">
+  
+</head>
+
+
+<body class="main-center theme-black" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://github.com/luoxiao2554" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">luoxiao</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">Big Engineer</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Shanghai, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="Search" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="Type something..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav menu-highlight">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">Home</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">Archives</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">Categories</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">Tags</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+          <a href="/links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">Links</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">About</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/luoxiao2554" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Autodesk/">Autodesk</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%85%B6%E4%BB%96/">其他</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%88%86%E5%B8%83%E5%BC%8F/">分布式</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%90%8E%E7%AB%AF/">后端</a><span class="category-list-count">24</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/">大数据</a><span class="category-list-count">43</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/">游戏开发</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%89%A9%E8%81%94%E7%BD%91/">物联网</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">算法与数据结构</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/">自动化测试</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BD%AC%E8%BD%BD/">转载</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget-body">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ActiveMQ/" rel="tag">ActiveMQ</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Azkaban/" rel="tag">Azkaban</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CDH/" rel="tag">CDH</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataTable/" rel="tag">DataTable</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Editor/" rel="tag">Editor</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/FFmpeg/" rel="tag">FFmpeg</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/FTP/" rel="tag">FTP</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Flume/" rel="tag">Flume</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Forge/" rel="tag">Forge</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HBase/" rel="tag">HBase</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HDFS/" rel="tag">HDFS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hadoop/" rel="tag">Hadoop</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hbase/" rel="tag">Hbase</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hibernate/" rel="tag">Hibernate</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hive/" rel="tag">Hive</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hue/" rel="tag">Hue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/InfluxDB/" rel="tag">InfluxDB</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JVM/" rel="tag">JVM</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Jekyll/" rel="tag">Jekyll</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kafka/" rel="tag">Kafka</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MapReduce/" rel="tag">MapReduce</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MatLab/" rel="tag">MatLab</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Matlab/" rel="tag">Matlab</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Maven/" rel="tag">Maven</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Minecraft/" rel="tag">Minecraft</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mybatis/" rel="tag">Mybatis</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NodeJS/" rel="tag">NodeJS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python3/" rel="tag">Python3</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/R/" rel="tag">R</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RPC/" rel="tag">RPC</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Raspberry-Pi/" rel="tag">Raspberry Pi</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Redis/" rel="tag">Redis</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Scala/" rel="tag">Scala</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Selenium/" rel="tag">Selenium</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Shiro/" rel="tag">Shiro</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spark/" rel="tag">Spark</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/" rel="tag">Spring</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Storm/" rel="tag">Storm</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WebSocket/" rel="tag">WebSocket</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Zookeeper/" rel="tag">Zookeeper</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ceph/" rel="tag">ceph</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hive/" rel="tag">hive</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zTree/" rel="tag">zTree</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/" rel="tag">问题总结</a><span class="tag-list-count">12</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/ActiveMQ/" style="font-size: 13px;">ActiveMQ</a> <a href="/tags/Azkaban/" style="font-size: 13px;">Azkaban</a> <a href="/tags/C/" style="font-size: 13px;">C</a> <a href="/tags/CDH/" style="font-size: 13.67px;">CDH</a> <a href="/tags/DataTable/" style="font-size: 13px;">DataTable</a> <a href="/tags/Editor/" style="font-size: 13px;">Editor</a> <a href="/tags/FFmpeg/" style="font-size: 13.17px;">FFmpeg</a> <a href="/tags/FTP/" style="font-size: 13px;">FTP</a> <a href="/tags/Flume/" style="font-size: 13.17px;">Flume</a> <a href="/tags/Forge/" style="font-size: 13px;">Forge</a> <a href="/tags/Git/" style="font-size: 13.17px;">Git</a> <a href="/tags/HBase/" style="font-size: 13px;">HBase</a> <a href="/tags/HDFS/" style="font-size: 13px;">HDFS</a> <a href="/tags/Hadoop/" style="font-size: 13.5px;">Hadoop</a> <a href="/tags/Hbase/" style="font-size: 13.33px;">Hbase</a> <a href="/tags/Hibernate/" style="font-size: 13px;">Hibernate</a> <a href="/tags/Hive/" style="font-size: 13.17px;">Hive</a> <a href="/tags/Hue/" style="font-size: 13px;">Hue</a> <a href="/tags/InfluxDB/" style="font-size: 13px;">InfluxDB</a> <a href="/tags/JVM/" style="font-size: 13px;">JVM</a> <a href="/tags/Java/" style="font-size: 13px;">Java</a> <a href="/tags/Jekyll/" style="font-size: 13.17px;">Jekyll</a> <a href="/tags/Kafka/" style="font-size: 13.17px;">Kafka</a> <a href="/tags/MapReduce/" style="font-size: 13.5px;">MapReduce</a> <a href="/tags/MatLab/" style="font-size: 13px;">MatLab</a> <a href="/tags/Matlab/" style="font-size: 13px;">Matlab</a> <a href="/tags/Maven/" style="font-size: 13.17px;">Maven</a> <a href="/tags/Minecraft/" style="font-size: 13px;">Minecraft</a> <a href="/tags/Mybatis/" style="font-size: 13px;">Mybatis</a> <a href="/tags/NodeJS/" style="font-size: 13px;">NodeJS</a> <a href="/tags/Python3/" style="font-size: 13.33px;">Python3</a> <a href="/tags/R/" style="font-size: 13.17px;">R</a> <a href="/tags/RPC/" style="font-size: 13px;">RPC</a> <a href="/tags/Raspberry-Pi/" style="font-size: 13.33px;">Raspberry Pi</a> <a href="/tags/Redis/" style="font-size: 13.33px;">Redis</a> <a href="/tags/Scala/" style="font-size: 13.33px;">Scala</a> <a href="/tags/Selenium/" style="font-size: 13px;">Selenium</a> <a href="/tags/Shiro/" style="font-size: 13px;">Shiro</a> <a href="/tags/Spark/" style="font-size: 13.67px;">Spark</a> <a href="/tags/Spring/" style="font-size: 13.33px;">Spring</a> <a href="/tags/Storm/" style="font-size: 13.33px;">Storm</a> <a href="/tags/Ubuntu/" style="font-size: 13.83px;">Ubuntu</a> <a href="/tags/Vue/" style="font-size: 13px;">Vue</a> <a href="/tags/WebSocket/" style="font-size: 13.17px;">WebSocket</a> <a href="/tags/Zookeeper/" style="font-size: 13px;">Zookeeper</a> <a href="/tags/ceph/" style="font-size: 13px;">ceph</a> <a href="/tags/hive/" style="font-size: 13px;">hive</a> <a href="/tags/zTree/" style="font-size: 13px;">zTree</a> <a href="/tags/%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/" style="font-size: 14px;">问题总结</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Archive</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">17</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a><span class="archive-list-count">5</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>
+              </p>
+              <p class="item-title">
+                <a href="/2019/08/20/2019%E2%80%9308-20-%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%EF%BC%9A%E5%9F%BA%E6%9C%AC%E5%88%86%E7%B1%BB%5B%E8%BD%AC%5D/" class="title">神经网络：基本分类[转]</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-08-20T14:39:00.000Z" itemprop="datePublished">2019-08-20</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/">大数据</a>
+              </p>
+              <p class="item-title">
+                <a href="/2019/08/17/2019%E2%80%9308-17-HiveSQL%E4%BC%98%E5%8C%96/" class="title">HiveSQL优化</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-08-17T13:54:00.000Z" itemprop="datePublished">2019-08-17</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E7%89%A9%E8%81%94%E7%BD%91/">物联网</a>
+              </p>
+              <p class="item-title">
+                <a href="/2019/07/29/2019%E2%80%9307-29-HDMI%E8%BF%9E%E6%8E%A5Raspberry/" class="title">HDMI连接Raspberry</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-07-29T14:26:00.000Z" itemprop="datePublished">2019-07-29</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>
+              </p>
+              <p class="item-title">
+                <a href="/2019/07/23/2019%E2%80%9307-23-Google%20Colab/" class="title">Google Colab</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-07-23T15:34:00.000Z" itemprop="datePublished">2019-07-23</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">算法与数据结构</a>
+              </p>
+              <p class="item-title">
+                <a href="/2019/07/18/2019%E2%80%9307-18-%E5%A0%86%E6%8E%92%E5%BA%8F%E7%9A%84%E5%BA%94%E7%94%A8-%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/" class="title">堆排序的应用-优先队列</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2019-07-18T15:52:00.000Z" itemprop="datePublished">2019-07-18</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-2018-11-14-Spring WebSocket消息推送" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Spring WebSocket消息推送
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2018/11/13/2018-11-14-Spring%20WebSocket%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81/" class="article-date">
+	  <time datetime="2018-11-13T16:00:00.000Z" itemprop="datePublished">2018-11-13</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/%E5%90%8E%E7%AB%AF/">后端</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link" href="/tags/WebSocket/" rel="tag">WebSocket</a>
+  </span>
+
+
+        
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2018/11/13/2018-11-14-Spring%20WebSocket%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81/#comments" class="article-comment-link">Comments</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <!-- build time:Wed Nov 13 2019 11:31:29 GMT+0800 (GMT+08:00) --><p>需求:后台编辑推送消息，前台实时接收消息</p><p>下面是js实现</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	bdipOnline();</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> bdipWebSocket;</span><br><span class="line"><span class="keyword">var</span> bdipReconnectTime = <span class="number">5000</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bdipOnline</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (<span class="built_in">window</span>.WebSocket) &#123;</span><br><span class="line">		<span class="keyword">var</span> protocol = publicJS.protocol == <span class="string">"https"</span>? <span class="string">"wss"</span>: <span class="string">"ws"</span>;</span><br><span class="line">        <span class="keyword">try</span>&#123;</span><br><span class="line">            bdipWebSocket = <span class="keyword">new</span> WebSocket(<span class="built_in">encodeURI</span>(protocol + <span class="string">'://'</span> + publicJS.host +<span class="string">'/ws'</span>)); <span class="comment">//cloud.bimbdip.com</span></span><br><span class="line">        &#125;<span class="keyword">catch</span> (err)&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">"online链接websocket失败"</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(bdipWebSocket)&#123;</span><br><span class="line"></span><br><span class="line">			bdipWebSocket.onopen = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">				<span class="built_in">console</span>.log(<span class="string">"bdipWebSocket链接成功... bdipReconnectTime :"</span> + bdipReconnectTime)</span><br><span class="line">				<span class="comment">//连接成功</span></span><br><span class="line">				<span class="comment">//bdipReconnectTime = 10000;</span></span><br><span class="line">                setTimeout(bdipOnline, bdipReconnectTime);</span><br><span class="line">			&#125;;</span><br><span class="line"></span><br><span class="line">			bdipWebSocket.onerror = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">				<span class="built_in">console</span>.log(<span class="string">"bdipWebSocket发生错误... bdipReconnectTime :"</span> + bdipReconnectTime)</span><br><span class="line">				<span class="comment">//连接失败</span></span><br><span class="line">				setTimeout(bdipOnline, bdipReconnectTime);</span><br><span class="line">				bdipReconnectTime += <span class="number">5000</span>;</span><br><span class="line">			&#125;;</span><br><span class="line">			bdipWebSocket.onclose = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">				<span class="comment">//连接断开</span></span><br><span class="line">				<span class="built_in">console</span>.log(<span class="string">"bdipWebSocket断开链接... bdipReconnectTime :"</span> + bdipReconnectTime)</span><br><span class="line">				setTimeout(bdipOnline, bdipReconnectTime);</span><br><span class="line">				bdipReconnectTime += <span class="number">5000</span>;</span><br><span class="line">			&#125;;</span><br><span class="line">			<span class="comment">//消息接收</span></span><br><span class="line">			bdipWebSocket.onmessage = <span class="function"><span class="keyword">function</span>(<span class="params">message</span>) </span>&#123;</span><br><span class="line">				<span class="built_in">console</span>.log(<span class="string">"接收到消息，消息内容为:"</span> + message);</span><br><span class="line">				<span class="keyword">var</span> data = <span class="built_in">JSON</span>.parse(message.data);</span><br><span class="line">				<span class="keyword">if</span> (data.type == <span class="string">'logMessage'</span>) &#123;</span><br><span class="line">					notificate(data.data);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 弹出消息框</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">notificate</span>(<span class="params">_message</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> msgContent = <span class="built_in">JSON</span>.parse(_message.content)</span><br><span class="line">	<span class="keyword">var</span> title = msgContent.title;</span><br><span class="line">	<span class="keyword">if</span>(title == <span class="literal">null</span> || <span class="keyword">typeof</span>(title) == <span class="string">'undefined'</span> || title == <span class="string">''</span>) &#123;</span><br><span class="line">		title = <span class="string">"通知中心"</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">var</span> content = msgContent.content;</span><br><span class="line">	<span class="keyword">if</span>(content.length &gt; <span class="number">140</span>) &#123;</span><br><span class="line">		content = content.substr(<span class="number">0</span>, <span class="number">140</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	$(<span class="string">"#notification-title"</span>).html(title);</span><br><span class="line">	$(<span class="string">"#notification-content"</span>).html(content);</span><br><span class="line">	<span class="comment">//$(".notification-panel").show();</span></span><br><span class="line">    $(<span class="string">".notification-panel"</span>).slideDown(<span class="number">1000</span>);</span><br><span class="line">	setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="comment">//$(".notification-panel").hide();</span></span><br><span class="line">        $(<span class="string">".notification-panel"</span>).slideUp(<span class="number">1000</span>);</span><br><span class="line">	&#125;, <span class="number">5000</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>下面是后台代码,先说一下实现思路:<br>1.在后台管理系统中编辑待推送数据并完成推送消息操作;<br>2.spring websocket 检测到用户登录，按某种规则将用户信息保存到redis；<br>3.定时轮训查看待推送信息，当检测到用户在线时进行推送，更新数据库为已推送；</p><p>其中使用到了使用redis（订阅和发布）功能进行数据推送,下面上代码：</p><p>spring websocket handler 监听用户登录的代码:</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.bim.bdip.cloud.home.web;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.alibaba.fastjson.JSONObject;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.mapper.EntityWrapper;</span><br><span class="line"><span class="keyword">import</span> com.bim.bdip.cloud.home.constant.BizServiceDefine;</span><br><span class="line"><span class="keyword">import</span> com.bim.bdip.cloud.home.constant.ConstantDefine;</span><br><span class="line"><span class="keyword">import</span> com.bim.bdip.cloud.home.core.base.Parameter;</span><br><span class="line"><span class="keyword">import</span> com.bim.bdip.cloud.home.domain.api.ApiResultEntity;</span><br><span class="line"><span class="keyword">import</span> com.bim.bdip.cloud.home.model.BimMessageCenter;</span><br><span class="line"><span class="keyword">import</span> com.bim.bdip.cloud.home.model.BimUser;</span><br><span class="line"><span class="keyword">import</span> com.bim.bdip.cloud.home.provider.IBizProvider;</span><br><span class="line"><span class="keyword">import</span> org.apache.ibatis.session.RowBounds;</span><br><span class="line"><span class="keyword">import</span> org.apache.log4j.LogManager;</span><br><span class="line"><span class="keyword">import</span> org.apache.log4j.Logger;</span><br><span class="line"><span class="keyword">import</span> org.redisson.api.RTopic;</span><br><span class="line"><span class="keyword">import</span> org.redisson.api.RedissonClient;</span><br><span class="line"><span class="keyword">import</span> org.redisson.api.listener.MessageListener;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Controller;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.socket.CloseStatus;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.socket.TextMessage;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.socket.WebSocketMessage;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.socket.WebSocketSession;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.socket.handler.TextWebSocketHandler;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.socket.server.support.HttpSessionHandshakeInterceptor;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WebSocketHandler</span> <span class="keyword">extends</span> <span class="title">TextWebSocketHandler</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger logger = LogManager.getLogger(WebSocketHandler.class);</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> RedissonClient redissonClient;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> IBizProvider bizProvider;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">handleTextMessage</span><span class="params">(WebSocketSession session, TextMessage message)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">afterConnectionEstablished</span><span class="params">(WebSocketSession session)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">super</span>.afterConnectionEstablished(session);</span><br><span class="line">        Map&lt;String, Object&gt; attributes = session.getAttributes();</span><br><span class="line"></span><br><span class="line">        BimUser user = (BimUser) attributes.get(ConstantDefine.LOGIN_SESSION_USER);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (user == <span class="keyword">null</span>) &#123;</span><br><span class="line">            session.close();</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">"检测到用户登录:"</span> + user.getId() + <span class="string">"当前线程ID为:"</span> + Thread.currentThread().getId());</span><br><span class="line">            Long userId = user.getId();</span><br><span class="line">            String topic = String.format(<span class="string">"notification:%d"</span>, userId);</span><br><span class="line">            RTopic&lt;BimMessageCenter&gt; rtopic = redissonClient.getTopic(topic);</span><br><span class="line">            rtopic.removeAllListeners();</span><br><span class="line"></span><br><span class="line">            String listenerKey = String.format(<span class="string">"notification:%d:listeners"</span>, user.getId());</span><br><span class="line">            redissonClient.getSet(listenerKey).delete();</span><br><span class="line">            Integer listenerId = rtopic.addListener(<span class="keyword">new</span> MessageListener&lt;BimMessageCenter&gt;() &#123;</span><br><span class="line">                <span class="meta">@Override</span></span><br><span class="line">                <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onMessage</span><span class="params">(String channel, BimMessageCenter msg)</span> </span>&#123;</span><br><span class="line">                    System.out.println(<span class="string">"向用户推送消息:"</span> + msg);</span><br><span class="line">                    JSONObject jsonObject = <span class="keyword">new</span> JSONObject();</span><br><span class="line">                    jsonObject.put(<span class="string">"type"</span>, <span class="string">"logMessage"</span>);</span><br><span class="line">                    jsonObject.put(<span class="string">"data"</span>, msg);</span><br><span class="line">                    TextMessage textMessage = <span class="keyword">new</span> TextMessage(jsonObject.toJSONString());</span><br><span class="line">                    <span class="keyword">try</span> &#123;</span><br><span class="line">                        session.sendMessage(textMessage);</span><br><span class="line">                    &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">                        logger.error(<span class="string">"Websocket Error."</span>, e);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line"></span><br><span class="line">            redissonClient.getSet(listenerKey).add(listenerId);</span><br><span class="line">            attributes.put(ConstantDefine.LISTENER_ID, listenerId);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">afterConnectionClosed</span><span class="params">(WebSocketSession session, CloseStatus status)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        Map&lt;String, Object&gt; attributes = session.getAttributes();</span><br><span class="line"></span><br><span class="line">        BimUser user = (BimUser) attributes.get(ConstantDefine.LOGIN_SESSION_USER);</span><br><span class="line">        Integer listenerId = (Integer) attributes.get(ConstantDefine.LISTENER_ID);</span><br><span class="line">        <span class="keyword">if</span> (user != <span class="keyword">null</span>) &#123;</span><br><span class="line">            System.out.println(<span class="string">"用户退出:"</span> + user.getId());</span><br><span class="line">            <span class="keyword">super</span>.afterConnectionClosed(session, status);</span><br><span class="line">            String topic = String.format(<span class="string">"notification:%d"</span>, user.getId());</span><br><span class="line">            String listenerKey = String.format(<span class="string">"notification:%d:listeners"</span>, user.getId());</span><br><span class="line">            redissonClient.getSet(listenerKey).remove(listenerId);</span><br><span class="line">            RTopic&lt;BimMessageCenter&gt; rtopic = redissonClient.getTopic(topic);</span><br><span class="line">            rtopic.removeListener(listenerId);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>下面是定时任务,定时任务轮训待推送数据，如果检测到用户登录(通过redis)，就进行数据推送(通过redis topic):</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.bim.bdip.cloud.home.scheduled;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.mapper.EntityWrapper;</span><br><span class="line"><span class="keyword">import</span> com.bim.bdip.cloud.home.model.BimMessageCenter;</span><br><span class="line"><span class="keyword">import</span> com.bim.bdip.cloud.home.service.IBimMessageCenterService;</span><br><span class="line"><span class="keyword">import</span> org.apache.ibatis.session.RowBounds;</span><br><span class="line"><span class="keyword">import</span> org.redisson.api.RTopic;</span><br><span class="line"><span class="keyword">import</span> org.redisson.api.RedissonClient;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="keyword">import</span> org.springframework.scheduling.annotation.EnableScheduling;</span><br><span class="line"><span class="keyword">import</span> org.springframework.scheduling.annotation.Scheduled;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Service;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="meta">@EnableScheduling</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NotificationTask</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> RedissonClient redissonClient;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> IBimMessageCenterService messageCenterService;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Scheduled</span>(cron=<span class="string">"1 * * * * ?"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">scanNotifications</span><span class="params">()</span> </span>&#123;EntityWrapper&lt;BimMessageCenter&gt; wrapper = <span class="keyword">new</span> EntityWrapper&lt;&gt;();</span><br><span class="line">        RowBounds rowBounds = <span class="keyword">new</span> RowBounds(<span class="number">0</span>, <span class="number">10000000</span>);</span><br><span class="line">        wrapper.where(<span class="string">"read_status = &#123;0&#125;"</span>, <span class="number">0</span>).and(<span class="string">"notification_status = &#123;0&#125;"</span>, <span class="number">0</span>).and(<span class="string">"message_type = &#123;0&#125;"</span>, <span class="string">"logMessage"</span>);</span><br><span class="line"></span><br><span class="line">        List&lt;BimMessageCenter&gt; messageList = messageCenterService.selectPage(rowBounds, wrapper);</span><br><span class="line">        System.out.println(<span class="string">"轮训检测数据库数据"</span> + messageList.size() + <span class="string">"当前线程ID为:"</span> + Thread.currentThread().getId() + <span class="string">"当前时间为"</span> + <span class="keyword">new</span> Date().getTime());</span><br><span class="line">        <span class="keyword">for</span>(BimMessageCenter message : messageList) &#123;</span><br><span class="line">            String listenerKey = String.format(<span class="string">"notification:%d:listeners"</span>, message.getReceiveId());</span><br><span class="line">            <span class="keyword">if</span>(redissonClient.getSet(listenerKey).size() &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                System.out.println(<span class="string">"检测到用户"</span> + message.getReceiveId() + <span class="string">"在线，推送消息"</span>);</span><br><span class="line">                String topic = String.format(<span class="string">"notification:%d"</span>, message.getReceiveId());</span><br><span class="line">                RTopic&lt;BimMessageCenter&gt; rTopic = redissonClient.getTopic(topic);</span><br><span class="line">                rTopic.publish(message);</span><br><span class="line">                <span class="keyword">if</span>(message.getNotificationStatus() != <span class="number">2</span>)&#123;</span><br><span class="line">                    message.setNotificationStatus(<span class="number">2</span>); <span class="comment">// 已推送</span></span><br><span class="line">                    <span class="keyword">this</span>.messageCenterService.update(message);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"轮训结束，当前时间为:"</span> + <span class="keyword">new</span> Date().getTime());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><!-- rebuild by neat -->
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="luoxiao.cf/2018/11/13/2018-11-14-Spring%20WebSocket%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81/" title="Spring WebSocket消息推送" target="_blank" rel="external">luoxiao.cf/2018/11/13/2018-11-14-Spring%20WebSocket%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/luoxiao2554" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/luoxiao2554" target="_blank"><span class="text-dark">luoxiao</span><small class="ml-1x">Big Engineer</small></a></h3>
+        <div>个人简介。</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+           
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/2018/11/14/2018-11-15-Ngnix%20Websocket%20400%20%E9%94%99%E8%AF%AF/" title="Ngnix Websocket 400 错误"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/2018/11/05/2018-11-06-hive%E5%90%84%E7%A7%8Djoin/" title="Hive 各种Join总计汇总"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/luoxiao2554" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script src="/js/plugin.min.js"></script>
+<script src="/js/application.js"></script>
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+
+
+
+
+   
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+   
+    
+  <!-- <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"> -->
+  <script src="//cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script>
+  <script type="text/javascript">
+  var gitalk = new Gitalk({
+    clientID: 'b6eff4e9fc3dae3c8764',
+    clientSecret: '1d0201dabf2358e2f833a3b2e51b99126d85045a',
+    repo: 'luoxiao2554.github.io',
+    owner: 'luoxiao2554',
+    admin: ['luoxiao2554'],
+    id: md5(location.pathname),
+    distractionFreeMode: true
+  })
+  gitalk.render('comments')
+  </script>
+
+      
+
+
+
+
+
+
+
+</body>
+</html>
