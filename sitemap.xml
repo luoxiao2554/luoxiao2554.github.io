@@ -100,14 +100,14 @@
   </url>
   
   <url>
-    <loc>luoxiao.cf/2019/07/08/2019%E2%80%9307-08-%E6%8E%92%E5%BA%8F%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E4%B8%8E%E7%A8%B3%E5%AE%9A%E6%80%A7/</loc>
+    <loc>luoxiao.cf/2019/07/08/2019%E2%80%9307-03-%E5%B8%8C%E5%B0%94%E3%80%81%E5%BD%92%E5%B9%B6%E3%80%81%E5%A0%86%E3%80%81%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/</loc>
     
     <lastmod>2019-11-13T04:56:08.680Z</lastmod>
     
   </url>
   
   <url>
-    <loc>luoxiao.cf/2019/07/08/2019%E2%80%9307-03-%E5%B8%8C%E5%B0%94%E3%80%81%E5%BD%92%E5%B9%B6%E3%80%81%E5%A0%86%E3%80%81%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/</loc>
+    <loc>luoxiao.cf/2019/07/08/2019%E2%80%9307-08-%E6%8E%92%E5%BA%8F%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E4%B8%8E%E7%A8%B3%E5%AE%9A%E6%80%A7/</loc>
     
     <lastmod>2019-11-13T04:56:08.680Z</lastmod>
     
@@ -124,20 +124,6 @@
     <loc>luoxiao.cf/2019/07/18/2019%E2%80%9307-18-%E5%A0%86%E6%8E%92%E5%BA%8F%E7%9A%84%E5%BA%94%E7%94%A8-%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/</loc>
     
     <lastmod>2019-11-13T04:56:08.680Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>luoxiao.cf/2019/07/01/2019-07-01-%E6%97%B6%E9%97%B4%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/</loc>
-    
-    <lastmod>2019-11-13T04:56:08.679Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>luoxiao.cf/2019/04/24/2019-04-24-RDD-DataSet%E5%92%8CDataFrame%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF/</loc>
-    
-    <lastmod>2019-11-13T04:56:08.679Z</lastmod>
     
   </url>
   
@@ -163,6 +149,13 @@
   </url>
   
   <url>
+    <loc>luoxiao.cf/2019/04/27/2019-04-27-CDH15-5-0-hbase-hue/</loc>
+    
+    <lastmod>2019-11-13T04:56:08.679Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>luoxiao.cf/2019/07/17/2019-07-17-ceph/</loc>
     
     <lastmod>2019-11-13T04:56:08.679Z</lastmod>
@@ -170,7 +163,7 @@
   </url>
   
   <url>
-    <loc>luoxiao.cf/2019/07/03/2019-07-03-%E6%9C%80%E5%A5%BD%E3%80%81%E6%9C%80%E5%9D%8F%E3%80%81%E5%B9%B3%E5%9D%87%20%E3%80%81%E5%9D%87%E6%91%8A%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/</loc>
+    <loc>luoxiao.cf/2019/04/24/2019-04-24-RDD-DataSet%E5%92%8CDataFrame%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF/</loc>
     
     <lastmod>2019-11-13T04:56:08.679Z</lastmod>
     
@@ -178,6 +171,13 @@
   
   <url>
     <loc>luoxiao.cf/2019/07/03/2019-07-03-%E5%86%92%E6%B3%A1%E3%80%81%E6%8F%92%E5%85%A5%E3%80%81%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/</loc>
+    
+    <lastmod>2019-11-13T04:56:08.679Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>luoxiao.cf/2019/07/03/2019-07-03-%E6%9C%80%E5%A5%BD%E3%80%81%E6%9C%80%E5%9D%8F%E3%80%81%E5%B9%B3%E5%9D%87%20%E3%80%81%E5%9D%87%E6%91%8A%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/</loc>
     
     <lastmod>2019-11-13T04:56:08.679Z</lastmod>
     
@@ -198,7 +198,7 @@
   </url>
   
   <url>
-    <loc>luoxiao.cf/2019/04/27/2019-04-27-CDH15-5-0-hbase-hue/</loc>
+    <loc>luoxiao.cf/2019/07/01/2019-07-01-%E6%97%B6%E9%97%B4%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/</loc>
     
     <lastmod>2019-11-13T04:56:08.679Z</lastmod>
     
@@ -247,7 +247,14 @@
   </url>
   
   <url>
-    <loc>luoxiao.cf/2019/04/23/2019-04-23-CDH5-15%E5%8D%87%E7%BA%A7spark1-6%E5%88%B02-3/</loc>
+    <loc>luoxiao.cf/2019/03/19/2019-03-19-ClouderaManager%E6%89%8B%E5%86%8C/</loc>
+    
+    <lastmod>2019-11-13T04:56:08.678Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>luoxiao.cf/2019/04/16/2019-04-16-spark-idea-windows-array-index-out-of-bounds-exception/</loc>
     
     <lastmod>2019-11-13T04:56:08.678Z</lastmod>
     
@@ -268,14 +275,7 @@
   </url>
   
   <url>
-    <loc>luoxiao.cf/2019/04/16/2019-04-16-spark-idea-windows-array-index-out-of-bounds-exception/</loc>
-    
-    <lastmod>2019-11-13T04:56:08.678Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>luoxiao.cf/2019/03/19/2019-03-19-ClouderaManager%E6%89%8B%E5%86%8C/</loc>
+    <loc>luoxiao.cf/2019/04/23/2019-04-23-CDH5-15%E5%8D%87%E7%BA%A7spark1-6%E5%88%B02-3/</loc>
     
     <lastmod>2019-11-13T04:56:08.678Z</lastmod>
     
@@ -317,14 +317,14 @@
   </url>
   
   <url>
-    <loc>luoxiao.cf/2018/11/14/2018-11-14-Spring%20WebSocket%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81/</loc>
+    <loc>luoxiao.cf/2018/11/27/2018-11-27-%E7%A6%BB%E7%BA%BF%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E7%B3%BB%E7%BB%9F(%E4%B8%89)/</loc>
     
     <lastmod>2019-11-13T04:56:08.677Z</lastmod>
     
   </url>
   
   <url>
-    <loc>luoxiao.cf/2018/11/27/2018-11-27-%E7%A6%BB%E7%BA%BF%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90%E7%B3%BB%E7%BB%9F(%E4%B8%89)/</loc>
+    <loc>luoxiao.cf/2018/11/14/2018-11-14-Spring%20WebSocket%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81/</loc>
     
     <lastmod>2019-11-13T04:56:08.677Z</lastmod>
     
@@ -338,14 +338,14 @@
   </url>
   
   <url>
-    <loc>luoxiao.cf/2018/12/02/2018-12-02-%E9%83%A8%E7%BD%B2storm%E9%9B%86%E7%BE%A4/</loc>
+    <loc>luoxiao.cf/2018/12/02/2018-12-02-VirtualBox%E5%AE%89%E8%A3%85CentOS6.7/</loc>
     
     <lastmod>2019-11-13T04:56:08.677Z</lastmod>
     
   </url>
   
   <url>
-    <loc>luoxiao.cf/2018/12/02/2018-12-02-VirtualBox%E5%AE%89%E8%A3%85CentOS6.7/</loc>
+    <loc>luoxiao.cf/2018/12/02/2018-12-02-%E9%83%A8%E7%BD%B2storm%E9%9B%86%E7%BE%A4/</loc>
     
     <lastmod>2019-11-13T04:56:08.677Z</lastmod>
     
@@ -401,7 +401,7 @@
   </url>
   
   <url>
-    <loc>luoxiao.cf/2018/09/29/2018-09-29-kafka%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2/</loc>
+    <loc>luoxiao.cf/2018/09/03/2018-09-3-%E5%9F%BA%E4%BA%8ESpark%E7%9A%84%E7%BD%91%E7%AB%99%E6%B5%8F%E8%A7%88%E6%95%B0%E6%8D%AE%E7%BB%9F%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/</loc>
     
     <lastmod>2019-11-13T04:56:08.676Z</lastmod>
     
@@ -415,7 +415,7 @@
   </url>
   
   <url>
-    <loc>luoxiao.cf/2018/09/03/2018-09-3-%E5%9F%BA%E4%BA%8ESpark%E7%9A%84%E7%BD%91%E7%AB%99%E6%B5%8F%E8%A7%88%E6%95%B0%E6%8D%AE%E7%BB%9F%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/</loc>
+    <loc>luoxiao.cf/2018/09/29/2018-09-29-kafka%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2/</loc>
     
     <lastmod>2019-11-13T04:56:08.676Z</lastmod>
     
@@ -457,7 +457,7 @@
   </url>
   
   <url>
-    <loc>luoxiao.cf/2018/09/29/2018-09-29-kafka%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</loc>
+    <loc>luoxiao.cf/2018/09/25/2018-09-25-ubuntu%2016.04%E5%AE%89%E8%A3%85matlab/</loc>
     
     <lastmod>2019-11-13T04:56:08.676Z</lastmod>
     
@@ -471,14 +471,14 @@
   </url>
   
   <url>
-    <loc>luoxiao.cf/2018/09/26/2018-09-26-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%88%86%E5%9D%97%E6%9F%A5%E6%89%BE/</loc>
+    <loc>luoxiao.cf/2018/09/29/2018-09-29-kafka%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</loc>
     
     <lastmod>2019-11-13T04:56:08.676Z</lastmod>
     
   </url>
   
   <url>
-    <loc>luoxiao.cf/2018/09/25/2018-09-25-ubuntu%2016.04%E5%AE%89%E8%A3%85matlab/</loc>
+    <loc>luoxiao.cf/2018/09/26/2018-09-26-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%88%86%E5%9D%97%E6%9F%A5%E6%89%BE/</loc>
     
     <lastmod>2019-11-13T04:56:08.676Z</lastmod>
     
@@ -492,14 +492,21 @@
   </url>
   
   <url>
-    <loc>luoxiao.cf/2018/08/26/2018-08-26-virtualenv%E6%90%AD%E5%BB%BA/</loc>
+    <loc>luoxiao.cf/2018/09/18/2018-09-18-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%A1%BA%E5%BA%8F%E6%9F%A5%E6%89%BE/</loc>
     
     <lastmod>2019-11-13T04:56:08.675Z</lastmod>
     
   </url>
   
   <url>
-    <loc>luoxiao.cf/2018/09/18/2018-09-18-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%A1%BA%E5%BA%8F%E6%9F%A5%E6%89%BE/</loc>
+    <loc>luoxiao.cf/2018/08/20/2018-08-20-minecraft%E6%B8%B8%E6%88%8F%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91/</loc>
+    
+    <lastmod>2019-11-13T04:56:08.675Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>luoxiao.cf/2018/09/15/2018-09-15-Redis%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2/</loc>
     
     <lastmod>2019-11-13T04:56:08.675Z</lastmod>
     
@@ -527,6 +534,13 @@
   </url>
   
   <url>
+    <loc>luoxiao.cf/2018/08/26/2018-08-26-scala%E9%9A%90%E5%BC%8F%E8%BD%AC%E6%8D%A2%E5%BA%94%E7%94%A8/</loc>
+    
+    <lastmod>2019-11-13T04:56:08.675Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>luoxiao.cf/2018/09/06/2018-09-06-influxdb%E5%B0%8F%E7%BB%93/</loc>
     
     <lastmod>2019-11-13T04:56:08.675Z</lastmod>
@@ -541,21 +555,7 @@
   </url>
   
   <url>
-    <loc>luoxiao.cf/2018/09/15/2018-09-15-Redis%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2/</loc>
-    
-    <lastmod>2019-11-13T04:56:08.675Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>luoxiao.cf/2018/08/26/2018-08-26-scala%E9%9A%90%E5%BC%8F%E8%BD%AC%E6%8D%A2%E5%BA%94%E7%94%A8/</loc>
-    
-    <lastmod>2019-11-13T04:56:08.675Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>luoxiao.cf/2018/08/17/2018-08-17-maven%20exclusion/</loc>
+    <loc>luoxiao.cf/2018/08/26/2018-08-26-virtualenv%E6%90%AD%E5%BB%BA/</loc>
     
     <lastmod>2019-11-13T04:56:08.675Z</lastmod>
     
@@ -569,7 +569,7 @@
   </url>
   
   <url>
-    <loc>luoxiao.cf/2018/09/16/2018-09-16-R%E5%AE%89%E8%A3%85%E5%8F%8A%E8%AF%AD%E8%A8%80%E7%9F%A9%E9%98%B5%E8%BF%90%E7%AE%97/</loc>
+    <loc>luoxiao.cf/2018/08/17/2018-08-17-maven%20exclusion/</loc>
     
     <lastmod>2019-11-13T04:56:08.675Z</lastmod>
     
@@ -583,13 +583,6 @@
   </url>
   
   <url>
-    <loc>luoxiao.cf/2018/08/20/2018-08-20-minecraft%E6%B8%B8%E6%88%8F%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91/</loc>
-    
-    <lastmod>2019-11-13T04:56:08.675Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>luoxiao.cf/2018/09/16/2018-09-16-%E6%95%A3%E5%88%97%E8%A1%A8%E5%86%B2%E7%AA%81%E8%A7%A3%E5%86%B3%E7%AD%96%E7%95%A5/</loc>
     
     <lastmod>2019-11-13T04:56:08.675Z</lastmod>
@@ -597,14 +590,21 @@
   </url>
   
   <url>
-    <loc>luoxiao.cf/2018/07/27/2018-07-27-sqlserver-sqlserver%E4%B8%ADor%E5%92%8Cand%E4%BC%98%E5%85%88%E7%BA%A7%E9%97%AE%E9%A2%98/</loc>
+    <loc>luoxiao.cf/2018/09/16/2018-09-16-R%E5%AE%89%E8%A3%85%E5%8F%8A%E8%AF%AD%E8%A8%80%E7%9F%A9%E9%98%B5%E8%BF%90%E7%AE%97/</loc>
+    
+    <lastmod>2019-11-13T04:56:08.675Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>luoxiao.cf/2018/07/28/2018-07-28-Raspberry%20Pi-Raspberry%20Pi%E5%BE%AE%E5%9E%8B%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
     
     <lastmod>2019-11-13T04:56:08.674Z</lastmod>
     
   </url>
   
   <url>
-    <loc>luoxiao.cf/2018/06/29/2018-06-29-Exception-NoClassDefFoundError%E5%92%8CClassNotFoundExceptio%E7%9A%84%E5%8C%BA%E5%88%AB/</loc>
+    <loc>luoxiao.cf/2018/05/10/2018-05-10-ubuntu-%E6%95%B0%E6%8D%AE%E6%A0%B7%E6%9C%AC%E7%9A%84%E7%A6%BB%E6%95%A3%E7%A8%8B%E5%BA%A6%E8%AE%A1%E7%AE%97/</loc>
     
     <lastmod>2019-11-13T04:56:08.674Z</lastmod>
     
@@ -646,7 +646,7 @@
   </url>
   
   <url>
-    <loc>luoxiao.cf/2018/06/24/2018-07-24-alipay-Alipay%E6%94%AF%E4%BB%98%E5%AE%9D%E9%9B%86%E6%88%90/</loc>
+    <loc>luoxiao.cf/2018/07/27/2018-07-27-sqlserver-sqlserver%E4%B8%ADor%E5%92%8Cand%E4%BC%98%E5%85%88%E7%BA%A7%E9%97%AE%E9%A2%98/</loc>
     
     <lastmod>2019-11-13T04:56:08.674Z</lastmod>
     
@@ -660,14 +660,14 @@
   </url>
   
   <url>
-    <loc>luoxiao.cf/2018/05/04/2018-05-04-hadoop-flume%E6%97%A5%E5%BF%97%E6%94%B6%E9%9B%86/</loc>
+    <loc>luoxiao.cf/2018/05/04/2018-05-04-hadoop-MapReduce%E5%B0%8F%E4%BE%8B%E5%AD%90/</loc>
     
     <lastmod>2019-11-13T04:56:08.674Z</lastmod>
     
   </url>
   
   <url>
-    <loc>luoxiao.cf/2018/05/04/2018-05-04-hadoop-MapReduce%E5%B0%8F%E4%BE%8B%E5%AD%90/</loc>
+    <loc>luoxiao.cf/2018/05/04/2018-05-04-hadoop-flume%E6%97%A5%E5%BF%97%E6%94%B6%E9%9B%86/</loc>
     
     <lastmod>2019-11-13T04:56:08.674Z</lastmod>
     
@@ -681,7 +681,7 @@
   </url>
   
   <url>
-    <loc>luoxiao.cf/2018/08/08/2018-08-08-gitignore%20%E9%85%8D%E7%BD%AE/</loc>
+    <loc>luoxiao.cf/2018/06/24/2018-07-24-alipay-Alipay%E6%94%AF%E4%BB%98%E5%AE%9D%E9%9B%86%E6%88%90/</loc>
     
     <lastmod>2019-11-13T04:56:08.674Z</lastmod>
     
@@ -695,21 +695,21 @@
   </url>
   
   <url>
-    <loc>luoxiao.cf/2018/07/28/2018-07-28-Raspberry%20Pi-Raspberry%20Pi%E5%BE%AE%E5%9E%8B%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    <loc>luoxiao.cf/2018/08/08/2018-08-08-gitignore%20%E9%85%8D%E7%BD%AE/</loc>
     
     <lastmod>2019-11-13T04:56:08.674Z</lastmod>
     
   </url>
   
   <url>
-    <loc>luoxiao.cf/2018/05/10/2018-05-10-ubuntu-%E6%95%B0%E6%8D%AE%E6%A0%B7%E6%9C%AC%E7%9A%84%E7%A6%BB%E6%95%A3%E7%A8%8B%E5%BA%A6%E8%AE%A1%E7%AE%97/</loc>
+    <loc>luoxiao.cf/2018/06/29/2018-06-29-Exception-NoClassDefFoundError%E5%92%8CClassNotFoundExceptio%E7%9A%84%E5%8C%BA%E5%88%AB/</loc>
     
     <lastmod>2019-11-13T04:56:08.674Z</lastmod>
     
   </url>
   
   <url>
-    <loc>luoxiao.cf/2018/04/22/2018-04-22-mapreduce-mapreduce%E7%9A%84shuffle%E6%9C%BA%E5%88%B6/</loc>
+    <loc>luoxiao.cf/2018/04/22/2018-04-22-mapreduce-%E5%88%9D%E8%AF%86mapreduce/</loc>
     
     <lastmod>2019-11-13T04:56:08.673Z</lastmod>
     
@@ -730,14 +730,14 @@
   </url>
   
   <url>
-    <loc>luoxiao.cf/2018/04/09/2018-04-09-%E5%88%86%E9%A1%B5-paging%E5%90%84%E7%A7%8D%E5%88%86%E9%A1%B5/</loc>
+    <loc>luoxiao.cf/2018/04/08/2018-04-08-activemq-ActiveMQ%E4%BD%BF%E7%94%A8/</loc>
     
     <lastmod>2019-11-13T04:56:08.673Z</lastmod>
     
   </url>
   
   <url>
-    <loc>luoxiao.cf/2018/04/08/2018-04-08-activemq-ActiveMQ%E4%BD%BF%E7%94%A8/</loc>
+    <loc>luoxiao.cf/2018/04/09/2018-04-09-%E5%88%86%E9%A1%B5-paging%E5%90%84%E7%A7%8D%E5%88%86%E9%A1%B5/</loc>
     
     <lastmod>2019-11-13T04:56:08.673Z</lastmod>
     
@@ -751,6 +751,13 @@
   </url>
   
   <url>
+    <loc>luoxiao.cf/2018/03/03/2018-03-3-ubuntu-ubuntu16.04%E5%AE%89%E8%A3%85qq/</loc>
+    
+    <lastmod>2019-11-13T04:56:08.673Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>luoxiao.cf/2018/04/19/2018-04-19-rpc-%E6%89%8B%E5%86%99%E5%9F%BA%E4%BA%8EJava%E5%8F%8D%E5%B0%84%E7%9A%84RPC%E6%A1%86%E6%9E%B6/</loc>
     
     <lastmod>2019-11-13T04:56:08.673Z</lastmod>
@@ -758,28 +765,7 @@
   </url>
   
   <url>
-    <loc>luoxiao.cf/2018/04/22/2018-04-22-mapreduce-%E5%88%9D%E8%AF%86mapreduce/</loc>
-    
-    <lastmod>2019-11-13T04:56:08.673Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>luoxiao.cf/2018/04/25/2018-04-25-thread-FTP%E5%A4%9A%E7%BA%BF%E7%A8%8B%E6%89%B9%E9%87%8F%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/</loc>
-    
-    <lastmod>2019-11-13T04:56:08.673Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>luoxiao.cf/2018/04/27/2018-04-27-hdfs-HDFS%E6%BA%90%E7%A0%81%E5%88%A8%E6%9E%90-FileSystem%E5%88%9D%E5%A7%8B%E5%8C%96/</loc>
-    
-    <lastmod>2019-11-13T04:56:08.673Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>luoxiao.cf/2018/05/03/2018-05-03-hadoop-%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8EHadoop%E7%9A%84Hive%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/</loc>
     
     <lastmod>2019-11-13T04:56:08.673Z</lastmod>
     
@@ -800,7 +786,21 @@
   </url>
   
   <url>
-    <loc>luoxiao.cf/2018/03/03/2018-03-3-ubuntu-ubuntu16.04%E5%AE%89%E8%A3%85qq/</loc>
+    <loc>luoxiao.cf/2018/04/27/2018-04-27-hdfs-HDFS%E6%BA%90%E7%A0%81%E5%88%A8%E6%9E%90-FileSystem%E5%88%9D%E5%A7%8B%E5%8C%96/</loc>
+    
+    <lastmod>2019-11-13T04:56:08.673Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>luoxiao.cf/2018/05/03/2018-05-03-hadoop-%E6%90%AD%E5%BB%BA%E5%9F%BA%E4%BA%8EHadoop%E7%9A%84Hive%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/</loc>
+    
+    <lastmod>2019-11-13T04:56:08.673Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>luoxiao.cf/2018/04/22/2018-04-22-mapreduce-mapreduce%E7%9A%84shuffle%E6%9C%BA%E5%88%B6/</loc>
     
     <lastmod>2019-11-13T04:56:08.673Z</lastmod>
     
@@ -856,20 +856,6 @@
   </url>
   
   <url>
-    <loc>luoxiao.cf/2018/03/12/2018-03-12-java-An%20invalid%20character%20%5B32%5D%20was%20present%20in%20the%20Cookie%20value/</loc>
-    
-    <lastmod>2019-11-13T04:56:08.672Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>luoxiao.cf/2018/02/26/2018-02-26-markdown-%E5%88%A9%E7%94%A8%E5%BE%AE%E5%8D%9A%E5%9B%BE%E5%BA%8A%E4%BC%98%E5%8C%96markdown%E7%B2%98%E8%B4%B4%E5%9B%BE%E7%89%87%E9%93%BE%E6%8E%A5%E4%BD%93%E9%AA%8C/</loc>
-    
-    <lastmod>2019-11-13T04:56:08.672Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>luoxiao.cf/2018/03/27/2018-03-27-wangEditor-wangEditor%E5%9B%BE%E7%89%87%E7%B2%98%E8%B4%B4%E4%B8%8A%E4%BC%A0/</loc>
     
     <lastmod>2019-11-13T04:56:08.672Z</lastmod>
@@ -891,6 +877,13 @@
   </url>
   
   <url>
+    <loc>luoxiao.cf/2018/03/18/2018-03-18-ubuntu-%E5%AE%89%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BAVMware/</loc>
+    
+    <lastmod>2019-11-13T04:56:08.672Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>luoxiao.cf/2018/03/22/2018-03-22-workflow-Java%20%20workflow/</loc>
     
     <lastmod>2019-11-13T04:56:08.672Z</lastmod>
@@ -905,14 +898,21 @@
   </url>
   
   <url>
-    <loc>luoxiao.cf/2018/03/18/2018-03-18-ubuntu-%E5%AE%89%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BAVMware/</loc>
+    <loc>luoxiao.cf/2018/03/18/2018-03-18-ubuntu-Ubuntu%2016.04TLS%20%E5%AE%89%E8%A3%85SecureCRT%E7%A0%B4%E8%A7%A3%E7%89%88/</loc>
     
     <lastmod>2019-11-13T04:56:08.672Z</lastmod>
     
   </url>
   
   <url>
-    <loc>luoxiao.cf/2018/03/18/2018-03-18-ubuntu-Ubuntu%2016.04TLS%20%E5%AE%89%E8%A3%85SecureCRT%E7%A0%B4%E8%A7%A3%E7%89%88/</loc>
+    <loc>luoxiao.cf/2018/03/12/2018-03-12-java-An%20invalid%20character%20%5B32%5D%20was%20present%20in%20the%20Cookie%20value/</loc>
+    
+    <lastmod>2019-11-13T04:56:08.672Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>luoxiao.cf/2018/02/26/2018-02-26-markdown-%E5%88%A9%E7%94%A8%E5%BE%AE%E5%8D%9A%E5%9B%BE%E5%BA%8A%E4%BC%98%E5%8C%96markdown%E7%B2%98%E8%B4%B4%E5%9B%BE%E7%89%87%E9%93%BE%E6%8E%A5%E4%BD%93%E9%AA%8C/</loc>
     
     <lastmod>2019-11-13T04:56:08.672Z</lastmod>
     
@@ -926,7 +926,7 @@
   </url>
   
   <url>
-    <loc>luoxiao.cf/2017/08/15/2017-8-15-JQuery%E5%BC%B9%E5%87%BA%E6%A1%86/</loc>
+    <loc>luoxiao.cf/2018/02/23/2018-02-23-python-%E6%A0%87%E5%87%86%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</loc>
     
     <lastmod>2019-11-13T04:56:08.671Z</lastmod>
     
@@ -940,14 +940,14 @@
   </url>
   
   <url>
-    <loc>luoxiao.cf/2017/09/19/2017-9-19-ubuntu-sublime/</loc>
+    <loc>luoxiao.cf/2017/08/05/2017-8-5-highlight/</loc>
     
     <lastmod>2019-11-13T04:56:08.671Z</lastmod>
     
   </url>
   
   <url>
-    <loc>luoxiao.cf/2017/08/05/2017-8-5-highlight/</loc>
+    <loc>luoxiao.cf/2017/09/19/2017-9-19-ubuntu-sublime/</loc>
     
     <lastmod>2019-11-13T04:56:08.671Z</lastmod>
     
@@ -961,21 +961,21 @@
   </url>
   
   <url>
+    <loc>luoxiao.cf/2017/08/15/2017-8-15-JQuery%E5%BC%B9%E5%87%BA%E6%A1%86/</loc>
+    
+    <lastmod>2019-11-13T04:56:08.671Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>luoxiao.cf/2017/07/23/2017-7-23-%E6%90%AD%E5%BB%BAftp%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+    
+    <lastmod>2019-11-13T04:56:08.671Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>luoxiao.cf/2017/08/22/2017-8-22-SpringMVC%E4%B9%B1%E7%A0%81/</loc>
-    
-    <lastmod>2019-11-13T04:56:08.671Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>luoxiao.cf/2018/02/12/2018-02-12-js-selenium%E8%B5%84%E6%96%99%E5%BA%93/</loc>
-    
-    <lastmod>2019-11-13T04:56:08.671Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>luoxiao.cf/2018/02/23/2018-02-23-python-%E6%A0%87%E5%87%86%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</loc>
     
     <lastmod>2019-11-13T04:56:08.671Z</lastmod>
     
@@ -989,7 +989,7 @@
   </url>
   
   <url>
-    <loc>luoxiao.cf/2017/07/23/2017-7-23-%E6%90%AD%E5%BB%BAftp%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+    <loc>luoxiao.cf/2018/02/12/2018-02-12-js-selenium%E8%B5%84%E6%96%99%E5%BA%93/</loc>
     
     <lastmod>2019-11-13T04:56:08.671Z</lastmod>
     
